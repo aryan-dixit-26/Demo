@@ -1,0 +1,25 @@
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 10px 0px;
+  justify-content: center;
+  align-content: space-around;
+}
+
+@media (max-width : 680px ) {
+  .App{
+    grid-template-columns: 1fr 1fr;
+    gap : 2px;
+    }
+}
+
+@media (max-width : 400px ) {
+  .App{
+    grid-template-columns: 1fr;
+    gap : 12px;
+    }
+}
