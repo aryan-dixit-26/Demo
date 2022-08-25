@@ -1,21 +1,24 @@
+import { useState } from 'react';
 import './App.css';
 import Card from './components/Card';
 
 function App() {
   const arr = [
-    'card1',
-    'card2',
-    'card3',
-    'card4',
-    'card5',
-    'card6',
-    'card7',
-    'card8',
-    'card9',
+    'red',
+    'blue',
+    'green',
+    'yellow',
+    'pink',
+    'orange',
+    'crimson',
+    'white',
+    'navy',
   ]
-  const itemList = arr.map((i)=>(<Card key={i}  name={i}/>))
+
+  const [bgColor, setBgColor] = useState("white")
+  const itemList = arr.map((i)=>(<Card key={i}  name={i} bgColor={bgColor} changeColor={setBgColor}/>))
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor : bgColor}}>
       {itemList}
     </div>
   );
